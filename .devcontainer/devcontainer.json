@@ -1,0 +1,22 @@
+        {
+          "name": "Node.js Development",
+          "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18", // Specify Node.js version
+          "features": {
+            "ghcr.io/devcontainers/features/common-utils:2": {
+              "installZsh": true,
+              "upgradePackages": true
+            },
+            "ghcr.io/devcontainers/features/node:1": {
+              "version": "18" // Ensure Node.js 18 is installed
+            }
+          },
+          "customizations": {
+            "vscode": {
+              "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+              ]
+            }
+          },
+          "postCreateCommand": "npm install" // Automatically install dependencies
+        }
